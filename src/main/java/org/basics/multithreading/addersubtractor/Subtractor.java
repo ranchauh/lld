@@ -1,4 +1,4 @@
-package org.basics.threads;
+package org.basics.multithreading.addersubtractor;
 
 public class Subtractor implements Runnable {
 

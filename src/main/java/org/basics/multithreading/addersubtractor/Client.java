@@ -1,4 +1,4 @@
-package org.basics.threads;
+package org.basics.multithreading.addersubtractor;
 
 public class Client {
     public static void main(String[] args) {

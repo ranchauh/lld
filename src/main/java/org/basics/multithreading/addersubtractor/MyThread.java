@@ -1,7 +1,6 @@
-package org.basics.threads;
+package org.basics.multithreading.addersubtractor;
 
 
-import java.lang.reflect.Field;
 import java.util.HashMap;
 
 public class MyThread extends Thread {
