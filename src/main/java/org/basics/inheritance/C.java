@@ -1,7 +1,5 @@
 package org.basics.inheritance;
 
-import java.util.AbstractList;
-
 public class C implements A, B{
 
     @Override
