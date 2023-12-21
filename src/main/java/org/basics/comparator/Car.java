@@ -1,5 +1,9 @@
 package org.basics.comparator;
 
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
 public class Car implements Comparable {
     private int speed;
     private int power;
@@ -19,5 +23,10 @@ public class Car implements Comparable {
             return Integer.compare(this.speed, ((Car)o).speed);
         }
         return 0;
+    }
+
+    public static void main(String[] args) {
+        List<Car> list = List.of(new Car(10, 20));
+        Collections.sort(list, Comparator.comparingInt(c -> c.power));
     }
 }

@@ -15,3 +15,9 @@ Code repository for LLD practice
 • sudoCODE - https://lnkd.in/g6jVFhmM
 
 • ByteByteGo - https://lnkd.in/gM_zHayT
+
+
+
+## Valuable Notes
+
+* https://github.com/kanmaytacker/fundamentals/tree/2023/august/advanced
