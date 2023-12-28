@@ -21,6 +21,7 @@ Code repository for LLD practice
 ## Valuable Notes
 
 * https://github.com/kanmaytacker/fundamentals/tree/2023/august/advanced
+* https://github.com/kanmaytacker/fundamentals/tree/master
 
 ## Reference Books
 
