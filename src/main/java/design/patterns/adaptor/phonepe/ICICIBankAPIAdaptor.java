@@ -1,6 +1,6 @@
-package design.patterns.adaptor;
+package design.patterns.adaptor.phonepe;
 
-import design.patterns.adaptor.thirdparty.ICICIBankAPI;
+import design.patterns.adaptor.phonepe.thirdparty.ICICIBankAPI;
 
 public class ICICIBankAPIAdaptor implements BankAPIAdaptor {
 

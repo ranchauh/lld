@@ -1,4 +1,4 @@
-package design.patterns.adaptor;
+package design.patterns.adaptor.phonepe;
 
 public interface BankAPIAdaptor {
     void sendMoney(String fromAccount, String toAccount, double amount);

@@ -1,4 +1,4 @@
-package design.patterns.adaptor.thirdparty;
+package design.patterns.adaptor.phonepe.thirdparty;
 
 public class ICICIBankAPI {
     public void sendMoney(double amount, String fromAccount, String toAccount) {

@@ -1,4 +1,4 @@
-package design.patterns.adaptor.thirdparty;
+package design.patterns.adaptor.phonepe.thirdparty;
 
 public class YesBankAPI {
     public void transferMoney(String fromAccount, String toAccount, double amount) {

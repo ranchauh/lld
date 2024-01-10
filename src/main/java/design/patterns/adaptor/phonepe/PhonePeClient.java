@@ -1,4 +1,4 @@
-package design.patterns.adaptor;
+package design.patterns.adaptor.phonepe;
 
 public class PhonePeClient {
     public static void main(String[] args) {

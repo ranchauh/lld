@@ -1,6 +1,6 @@
-package design.patterns.adaptor;
+package design.patterns.adaptor.phonepe;
 
-import design.patterns.adaptor.thirdparty.YesBankAPI;
+import design.patterns.adaptor.phonepe.thirdparty.YesBankAPI;
 
 public class YesBankAPIAdaptor implements BankAPIAdaptor {
 
