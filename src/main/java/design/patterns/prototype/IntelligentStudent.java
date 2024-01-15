@@ -1,5 +1,7 @@
 package design.patterns.prototype;
 
+import java.util.logging.Logger;
+
 public class IntelligentStudent extends Student {
     private double iq;
 
