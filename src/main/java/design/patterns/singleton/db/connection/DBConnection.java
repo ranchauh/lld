@@ -1,4 +1,4 @@
-package design.patterns.singleton;
+package design.patterns.singleton.db.connection;
 
 public class DBConnection {
     private static volatile DBConnection dbc;

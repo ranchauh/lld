@@ -1,5 +1,6 @@
 package design.patterns.singleton;
 
+import design.patterns.singleton.db.connection.DBConnection;
 import org.junit.Test;
 import org.testng.AssertJUnit;
 
