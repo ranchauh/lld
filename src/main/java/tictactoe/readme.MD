@@ -48,6 +48,8 @@
 * `Bot` player can have different algorithms to make its move depending on the difficulty level selected.
    So, strategy pattern can be used to create separate strategy for each of the difficulty level.
     
-    ![img.png](bot-playing-strategy.png)
+    ![bot-playing-strategy.png](bot-playing-strategy.png)
 
-* Similarly, there can be multiple algorith to decide the game winning/draw case. So strategy pattern can be used for the same. 
+* Similarly, there can be multiple algorith to decide the game winning/draw case. So strategy pattern can be used for the same.
+
+    ![winning-strategy.png](winning-strategy.png)

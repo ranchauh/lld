@@ -41,7 +41,7 @@ Code repository for LLD practice
 1. Google Senior Staff (L7) Engineer's detailed whitepaper notes - https://lnkd.in/gGWf-Nvy
 2. system-design-primer (hollistic resource for system design interviews) - https://lnkd.in/g6yMEsGv
 3. System Design newsletter - https://lnkd.in/gewfQQVh
-4. Byte-Sized Design newsletter - https://lnkd.in/gdekpcG3
+4. Byte-Sized Design - https://bytesizeddesign.substack.com/p/the-byte-sized-design-list-of-system
 5. ByteByteGo system design newsletter - https://lnkd.in/gbCDC7XT
 6. Quastor (eng blog summaries) - https://blog.quastor.org/
 
