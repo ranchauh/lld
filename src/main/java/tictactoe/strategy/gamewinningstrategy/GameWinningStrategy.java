@@ -1,8 +1,9 @@
 package tictactoe.strategy.gamewinningstrategy;
 
+import lombok.NonNull;
 import tictactoe.model.Board;
 import tictactoe.model.Move;
 
 public interface GameWinningStrategy {
-    boolean evaluate(Board board, Move move);
+    boolean evaluate(@NonNull final Board board, @NonNull final  Move move);
 }

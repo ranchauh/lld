@@ -26,7 +26,7 @@ public class DiagonalWinningStrategy implements GameWinningStrategy {
         } else return row == col && checkDiagonal(rightDiagonalMap, size, symbol, update);
     }
 
-    private boolean checkDiagonal(Map<Symbol, Integer> map, int size, Symbol symbol, int update) {
+    private boolean checkDiagonal(@NonNull final Map<Symbol, Integer> map,final int size,@NonNull final Symbol symbol,final int update) {
         map.put(symbol, map.getOrDefault(symbol, 0) + update);
         return map.get(symbol) == size;
     }

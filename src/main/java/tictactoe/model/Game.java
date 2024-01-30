@@ -41,19 +41,25 @@ public class Game {
         }
     }
 
+    private boolean gameWon(Move move, Player player) {
+        for(GameWinningStrategy winningStrategy : this.getWinningStrategies()) {
+            if(winningStrategy.evaluate(this.getBoard(), move)) {
+                this.setWinner(player);
+                this.setGameState(GameState.ENDED);
+                return true;
+            }
+        }
+        return false;
+    }
+
     public void makeMove(int row, int col) throws InvalidGameStateException, InvalidMoveException {
         this.validateGame();
         Player player = this.getPlayers().get(this.getNextMovePlayerIndex());
         Cell cell = this.getBoard().makeMove(row, col, player);
         Move move = new Move(cell, this.getNextMovePlayerIndex(), this.getGameState(), false);
         this.getMoves().add(move);
-        // check winner
-        for(GameWinningStrategy winningStrategy : this.getWinningStrategies()) {
-            if(winningStrategy.evaluate(this.getBoard(), move)) {
-                this.setWinner(player);
-                this.setGameState(GameState.ENDED);
-                return;
-            }
+        if(gameWon(move, player)) {
+            return;
         }
         int nextPlayerIndex = this.getNextMovePlayerIndex() + 1;
         this.setNextMovePlayerIndex(nextPlayerIndex % this.getPlayers().size());
@@ -72,13 +78,8 @@ public class Game {
                 .setCellState(CellState.EMPTY);
         this.setNextMovePlayerIndex(lastMove.getPlayerIndex());
         this.setGameState(lastMove.getGameState());
-        // update winning strategy
-        for(GameWinningStrategy winningStrategy : this.getWinningStrategies()) {
-            if(winningStrategy.evaluate(this.getBoard(), lastMove)) {
-                this.setWinner(lastMove.getCell().getPlayer());
-                this.setGameState(GameState.ENDED);
-                return;
-            }
+        if(gameWon(lastMove, lastMove.getCell().getPlayer())) {
+            return;
         }
         this.moves.remove(lastMove);
         this.setWinner(null);

@@ -8,14 +8,13 @@ import lombok.Setter;
 public class Bot extends Player {
     private BotDifficultyLevel difficultyLevel;
 
-
-    Bot(int id, String name, Symbol symbol, PlayerType playerType) {
-        super(id, name, symbol, playerType);
+    Bot(int id, String name, Symbol symbol) {
+        super(id, name, symbol, PlayerType.BOT);
         this.difficultyLevel = BotDifficultyLevel.EASY;
     }
 
-    Bot(int id, String name, Symbol symbol, PlayerType playerType, BotDifficultyLevel difficultyLevel) {
-        super(id, name, symbol, playerType);
+    Bot(int id, String name, Symbol symbol, BotDifficultyLevel difficultyLevel) {
+        super(id, name, symbol, PlayerType.BOT);
         this.difficultyLevel = difficultyLevel;
     }
 }

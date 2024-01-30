@@ -50,6 +50,6 @@
     
     ![bot-playing-strategy.png](bot-playing-strategy.png)
 
-* Similarly, there can be multiple algorith to decide the game winning/draw case. So strategy pattern can be used for the same.
+* Similarly, there can be multiple algorithms to decide the game winning/draw case. So strategy pattern can be used for the same.
 
     ![winning-strategy.png](winning-strategy.png)

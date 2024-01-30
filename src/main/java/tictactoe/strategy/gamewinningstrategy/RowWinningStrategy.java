@@ -1,13 +1,11 @@
 package tictactoe.strategy.gamewinningstrategy;
 
+import lombok.NonNull;
 import tictactoe.model.Board;
-import tictactoe.model.Game;
 import tictactoe.model.Move;
 import tictactoe.model.Symbol;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class RowWinningStrategy implements GameWinningStrategy {
@@ -15,7 +13,7 @@ public class RowWinningStrategy implements GameWinningStrategy {
     private final Map<Integer, Map<Symbol, Integer>> rowMap = new HashMap<>();
 
     @Override
-    public boolean evaluate(Board board, Move move) {
+    public boolean evaluate(@NonNull final Board board,@NonNull final Move move) {
         int row = move.getCell().getRow();
         Symbol symbol = move.getSymbol();
         int update = move.isUndo() ? -1 : 1;
