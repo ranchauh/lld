@@ -4,11 +4,11 @@ import java.util.Queue;
 import java.util.concurrent.Semaphore;
 
 public class Producer implements Runnable {
-    private Queue<Object> queue;
-    private String name;
-    private int maxSize;
-    private Semaphore producerSemaphore;
-    private Semaphore consumerSemaphore;
+    final private Queue<Object> queue;
+    final private String name;
+    final private int maxSize;
+    final private Semaphore producerSemaphore;
+    final private Semaphore consumerSemaphore;
 
     Producer(Queue<Object> queue, int maxSize, String name,
              Semaphore producerSemaphore, Semaphore consumerSemaphore) {

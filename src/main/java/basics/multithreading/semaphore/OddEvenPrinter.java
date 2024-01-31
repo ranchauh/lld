@@ -6,11 +6,11 @@ import java.util.concurrent.Semaphore;
 import java.util.function.IntConsumer;
 
 public class OddEvenPrinter {
-    private int n;
+    final private int n;
 
     int num;
 
-    private Semaphore oddS, evenS;
+    final private Semaphore oddS, evenS;
 
     public OddEvenPrinter(int n) {
         this.n = n;

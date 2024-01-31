@@ -27,8 +27,8 @@ public class GameController {
                .build();
     }
 
-    public void makeMove(Game game, int row, int col) throws InvalidMoveException, InvalidGameStateException {
-        game.makeMove(row, col);
+    public void makeMove(Game game) throws InvalidMoveException, InvalidGameStateException {
+        game.makeMove();
     }
 
     public GameState checkStatus(Game game) {

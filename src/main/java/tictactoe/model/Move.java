@@ -10,9 +10,6 @@ import lombok.Setter;
 @AllArgsConstructor
 public class Move {
     @NonNull private Cell cell;
-    @NonNull private int playerIndex;
-    @NonNull private GameState gameState;
-    private boolean isUndo;
 
     public int getRow() {
         return cell.getRow();

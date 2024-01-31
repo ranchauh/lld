@@ -2,7 +2,6 @@ package tictactoe.strategy.gamewinningstrategy;
 
 import lombok.NonNull;
 import tictactoe.model.Board;
-import tictactoe.model.GameState;
 import tictactoe.model.Move;
 import tictactoe.model.Symbol;
 
@@ -11,20 +10,26 @@ import java.util.Map;
 
 public class ColWinningStrategy implements GameWinningStrategy {
 
-    private final Map<Integer, Map<Symbol, Integer>> colMap = new HashMap<>();
+    private final Map<Integer, Map<Symbol, Integer>> colMaps = new HashMap<>();
 
     @Override
     public boolean evaluate(@NonNull final Board board, @NonNull final Move move) {
         int col = move.getCell().getCol();
         Symbol symbol = move.getSymbol();
-        int update = move.isUndo() ? -1 : 1;
 
-        Map<Symbol, Integer> map = colMap.getOrDefault(col, new HashMap<>());
-        map.put(symbol, map.getOrDefault(symbol, 0) + update);
+        Map<Symbol, Integer> map = colMaps.getOrDefault(col, new HashMap<>());
+        map.put(symbol, map.getOrDefault(symbol, 0) + 1);
 
-        colMap.put(col, map);
+        colMaps.put(col, map);
 
         return map.get(symbol) == board.getSize();
+    }
+
+    @Override
+    public void handleUndo(@NonNull final Board board, @NonNull Move move) {
+        int col = move.getCol();
+        Map<Symbol, Integer> colMap = colMaps.get(col);
+        colMap.put(move.getSymbol(), colMap.get(move.getSymbol()) - 1);
     }
 
 }

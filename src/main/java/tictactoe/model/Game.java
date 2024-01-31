@@ -35,54 +35,73 @@ public class Game {
         return new Builder();
     }
 
-    public void validateGame() throws InvalidGameStateException {
-        if(this.gameState != GameState.IN_PROGRESS) {
-            throw new InvalidGameStateException("Game is not in progress");
-        }
+    private boolean isInvalidMove(Move move) {
+        int row = move.getRow();
+        int col = move.getCol();
+        return row < 0 || row >= this.getBoard().getSize()
+                || col < 0 || col >= this.getBoard().getSize()
+                || this.getBoard().getBoard().get(row).get(col).getCellState() != CellState.EMPTY;
     }
 
-    private boolean gameWon(Move move, Player player) {
+    private boolean isWinningMove(Move move) {
         for(GameWinningStrategy winningStrategy : this.getWinningStrategies()) {
             if(winningStrategy.evaluate(this.getBoard(), move)) {
-                this.setWinner(player);
-                this.setGameState(GameState.ENDED);
                 return true;
             }
         }
         return false;
     }
 
-    public void makeMove(int row, int col) throws InvalidGameStateException, InvalidMoveException {
-        this.validateGame();
+    public void makeMove() throws InvalidGameStateException, InvalidMoveException {
         Player player = this.getPlayers().get(this.getNextMovePlayerIndex());
-        Cell cell = this.getBoard().makeMove(row, col, player);
-        Move move = new Move(cell, this.getNextMovePlayerIndex(), this.getGameState(), false);
-        this.getMoves().add(move);
-        if(gameWon(move, player)) {
-            return;
+        Move move = player.makeMove(this.board);
+        if(isInvalidMove(move)) {
+            throw new InvalidMoveException(String.format("Invalid move at: [%d,%d]", move.getRow(), move.getCol()));
         }
+
+        Cell boardCell = this.getBoard().getBoard().get(move.getRow()).get(move.getCol());
+        boardCell.setPlayer(player);
+        boardCell.setCellState(CellState.FILLED);
+        move = new Move(boardCell);
+
+        this.getMoves().add(move);
         int nextPlayerIndex = this.getNextMovePlayerIndex() + 1;
         this.setNextMovePlayerIndex(nextPlayerIndex % this.getPlayers().size());
+        if(isWinningMove(move)) {
+            this.setWinner(player);
+            this.setGameState(GameState.ENDED);
+        } else if(isGameDrawn()) {
+            this.setGameState(GameState.DRAW);
+        }
+    }
+
+    private boolean isGameDrawn() {
+        return this.getMoves().size() == this.getBoard().getSize() * this.getBoard().getSize();
     }
 
     public void undo() {
         int size = this.getMoves().size();
         if(size == 0) {
+            System.out.println("Nothing to undo");
             return;
         }
         Move lastMove = this.moves.get(size - 1);
-        lastMove.setUndo(true);
         this.getBoard().getBoard()
                 .get(lastMove.getRow())
                 .get(lastMove.getCol())
                 .setCellState(CellState.EMPTY);
-        this.setNextMovePlayerIndex(lastMove.getPlayerIndex());
-        this.setGameState(lastMove.getGameState());
-        if(gameWon(lastMove, lastMove.getCell().getPlayer())) {
-            return;
-        }
+        int nextPlayerIndex = this.getNextMovePlayerIndex() - 1;
+        nextPlayerIndex = (nextPlayerIndex + this.getPlayers().size()) % this.getPlayers().size();
+        this.setNextMovePlayerIndex(nextPlayerIndex);
         this.moves.remove(lastMove);
-        this.setWinner(null);
+        // update winning strategies
+        this.updateWinningStrategies(lastMove);
+    }
+
+    private void updateWinningStrategies(Move move) {
+        for(GameWinningStrategy winningStrategy : this.getWinningStrategies()) {
+            winningStrategy.handleUndo(this.getBoard(), move);
+        }
     }
 
     public static class Builder {

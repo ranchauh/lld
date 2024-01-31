@@ -3,9 +3,9 @@ package basics.multithreading.producerconsumermutex;
 import java.util.Queue;
 
 public class Producer implements Runnable {
-    private Queue<Object> queue;
-    private String name;
-    private int maxSize;
+    final private Queue<Object> queue;
+    final private String name;
+    final private int maxSize;
 
     Producer(Queue<Object> queue, int maxSize, String name) {
         this.queue = queue;

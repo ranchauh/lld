@@ -18,19 +18,36 @@ public class DiagonalWinningStrategy implements GameWinningStrategy {
         int row = move.getRow();
         int col = move.getCol();
         int size = board.getSize();
-        int update = move.isUndo() ? -1 : 1;
 
         Symbol symbol = move.getSymbol();
-        if(row == (board.getSize() - (col + 1)) && checkDiagonal(leftDiagonalMap, size, symbol, update)) {
-            return true;
-        } else return row == col && checkDiagonal(rightDiagonalMap, size, symbol, update);
+        boolean isWon = false;
+        if(row == col) {
+            rightDiagonalMap.put(symbol, rightDiagonalMap.getOrDefault(symbol, 0) + 1);
+            isWon = rightDiagonalMap.get(symbol) == size;
+        }
+
+        if(row + col == size - 1) {
+            leftDiagonalMap.put(symbol, leftDiagonalMap.getOrDefault(symbol, 0) + 1);
+            isWon = leftDiagonalMap.get(symbol) == size;
+        }
+
+        return isWon;
     }
 
-    private boolean checkDiagonal(@NonNull final Map<Symbol, Integer> map,final int size,@NonNull final Symbol symbol,final int update) {
-        map.put(symbol, map.getOrDefault(symbol, 0) + update);
-        return map.get(symbol) == size;
-    }
+    @Override
+    public void handleUndo(@NonNull final Board board, @NonNull Move move) {
+        int row = move.getRow();
+        int col = move.getCol();
+        int size = board.getSize();
 
+        Symbol symbol  = move.getSymbol();
+        if(row == col) {
+            rightDiagonalMap.put(symbol, rightDiagonalMap.get(symbol) - 1);
+        }
+        if(row + col == size - 1) {
+            leftDiagonalMap.put(symbol, leftDiagonalMap.get(symbol) - 1);
+        }
+    }
 
 
 }

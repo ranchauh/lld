@@ -2,7 +2,6 @@ package tictactoe.model;
 
 import lombok.Getter;
 import lombok.Setter;
-import tictactoe.exception.InvalidMoveException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +18,11 @@ public class Board {
         for(int i=0; i<size; i++) {
             this.board.add(new ArrayList<>());
             for(int j=0; j<size; j++) {
-                this.board.get(i).add(new Cell(i, j));
+                this.board.get(i).add(Cell.builder()
+                                .row(i)
+                                .col(j)
+                                .cellState(CellState.EMPTY)
+                        .build());
             }
         }
     }
@@ -41,21 +44,5 @@ public class Board {
             System.out.println();
         }
         System.out.println();
-    }
-
-    public Cell makeMove(int row, int col, Player player) throws InvalidMoveException {
-        if(this.isInvalidMove(row, col)) {
-            throw new InvalidMoveException(String.format("Invalid move at cell [%d,%d]", row, col));
-        }
-        Cell cell = this.getBoard().get(row).get(col);
-        cell.setPlayer(player);
-        cell.setCellState(CellState.FILLED);
-        return cell;
-    }
-
-    private boolean isInvalidMove(int row, int col) {
-        return row < 0 || row >= this.getSize()
-                || col < 0 || col >= this.getSize()
-                || this.getBoard().get(row).get(col).getCellState() != CellState.EMPTY;
     }
 }

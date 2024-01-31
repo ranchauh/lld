@@ -4,11 +4,11 @@ import java.util.Queue;
 import java.util.concurrent.Semaphore;
 
 public class Consumer implements Runnable {
-    private Queue<Object> queue;
-    private String name;
-    private int maxSize;
-    private Semaphore producerSemaphore;
-    private Semaphore consumerSemaphore;
+    final private Queue<Object> queue;
+    final private String name;
+    final private int maxSize;
+    final private Semaphore producerSemaphore;
+    final private Semaphore consumerSemaphore;
 
     Consumer(Queue<Object> queue, int maxSize, String name,
              Semaphore producerSemaphore, Semaphore consumerSemaphore) {
@@ -24,13 +24,13 @@ public class Consumer implements Runnable {
         while (true) {
 //            if (queue.size() > 0){
             try {
-                consumerSemaphore.acquire();
+                consumerSemaphore.acquire(); // cs--
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
             System.out.println(name + "is consuming an element & size is " + queue.size());
             queue.remove();
-            producerSemaphore.release();
+            producerSemaphore.release(); // ps++
 //            }
         }
     }
