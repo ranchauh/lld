@@ -8,6 +8,7 @@ import parkinglot.models.*;
 import java.sql.Date;
 
 @Builder
+@Getter
 public class IssueTicketResponseDto {
     private ResponseStatus responseStatus;
     private Ticket ticket;

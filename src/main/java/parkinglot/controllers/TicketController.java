@@ -27,6 +27,7 @@ public class TicketController {
                     .ticket(ticket)
                     .build();
         } catch (Exception e) {
+            e.printStackTrace();
             return IssueTicketResponseDto.builder()
                     .responseStatus(ResponseStatus.FAILED)
                     .build();
