@@ -19,6 +19,8 @@
 
 ## Class Design
 
+![parking-lot-cd.png](resources/parking-lot-cd.png)
+
 ## Schema Design
 
 ![parking-lot-schema.png](resources/parking-lot-schema.png)
