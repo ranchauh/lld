@@ -19,7 +19,9 @@ public class TicketController {
             Ticket ticket = ticketService.issueTicket(issueTicketRequestDto.getGateId(),
                     issueTicketRequestDto.getOwnerName(),
                     issueTicketRequestDto.getVehicleType(),
-                    issueTicketRequestDto.getVehicleNumber());
+                    issueTicketRequestDto.getVehicleNumber(),
+                    issueTicketRequestDto.getSpotAssignmentStrategyType()
+                    );
             return IssueTicketResponseDto.builder()
                     .responseStatus(ResponseStatus.SUCCESS)
                     .ticket(ticket)

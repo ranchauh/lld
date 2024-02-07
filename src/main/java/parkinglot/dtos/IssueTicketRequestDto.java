@@ -2,6 +2,7 @@ package parkinglot.dtos;
 
 import lombok.Getter;
 import lombok.Setter;
+import parkinglot.models.SpotAssignmentStrategyType;
 import parkinglot.models.VehicleType;
 
 @Getter
@@ -11,4 +12,5 @@ public class IssueTicketRequestDto {
     private VehicleType vehicleType;
     private String vehicleNumber;
     private String ownerName;
+    private SpotAssignmentStrategyType spotAssignmentStrategyType;
 }

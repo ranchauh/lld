@@ -1,7 +1,7 @@
 package parkinglot.models;
 
 public enum ParkingSpotStatus {
-    AVAILABLE,
-    UNAVAILABLE,
+    EMPTY,
+    ASSIGNED,
     UNDER_MAINTENANCE
 }

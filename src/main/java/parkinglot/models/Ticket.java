@@ -1,7 +1,15 @@
 package parkinglot.models;
 
-import java.sql.Date;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
 
+import java.util.Date;
+
+
+@Setter
+@Getter
+@Builder
 public class Ticket extends BaseModel {
     private String ticketNumber;
     private Date entryTime;
