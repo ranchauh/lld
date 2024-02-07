@@ -1,47 +1,44 @@
-<mxfile host="app.diagrams.net" modified="2024-02-07T13:16:34.898Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="46uFluRKutpkCV-hY58g" version="23.1.1" type="device">
+<mxfile host="app.diagrams.net" modified="2024-02-07T13:49:48.869Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="cTd0aXJF3tEEX4CS_89H" version="23.1.1" type="device">
   <diagram name="Page-1" id="s0Cq3FbCwCDTGGkv9md5">
-    <mxGraphModel dx="1434" dy="795" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2261" dy="795" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="mLb-JtUM6yK8Hnpxc0uU-17" value="&lt;div style=&quot;box-sizing:border-box;width:100%;background:#e4e4e4;padding:2px;&quot;&gt;parking_lot&lt;/div&gt;&lt;table style=&quot;width:100%;font-size:1em;&quot; cellpadding=&quot;2&quot; cellspacing=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;PK&lt;br&gt;&lt;br&gt;FK&lt;br&gt;FK&lt;br&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;id&lt;br&gt;capacity&lt;br&gt;spot_assignment_strategy_id&lt;br&gt;fee_calc_strategy_id&lt;br&gt;&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" parent="1" vertex="1">
-          <mxGeometry x="230" y="100" width="420" height="90" as="geometry" />
+          <mxGeometry x="-780" y="90" width="250" height="90" as="geometry" />
         </mxCell>
         <mxCell id="mLb-JtUM6yK8Hnpxc0uU-40" value="&lt;div style=&quot;box-sizing:border-box;width:100%;background:#e4e4e4;padding:2px;&quot;&gt;parking_floor&lt;/div&gt;&lt;table style=&quot;width:100%;font-size:1em;&quot; cellpadding=&quot;2&quot; cellspacing=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;PK&lt;br&gt;&lt;br&gt;FK&lt;br&gt;FK&lt;br&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;id&lt;br&gt;number&lt;br&gt;parking_lot_id&lt;br&gt;status_type_id&lt;br&gt;&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" parent="1" vertex="1">
-          <mxGeometry x="230" y="510" width="420" height="90" as="geometry" />
+          <mxGeometry x="-780" y="200" width="250" height="90" as="geometry" />
         </mxCell>
         <mxCell id="mLb-JtUM6yK8Hnpxc0uU-41" value="&lt;div style=&quot;box-sizing:border-box;width:100%;background:#e4e4e4;padding:2px;&quot;&gt;gate&lt;/div&gt;&lt;table style=&quot;width:100%;font-size:1em;&quot; cellpadding=&quot;2&quot; cellspacing=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;PK&lt;br&gt;&lt;br&gt;FK&lt;br&gt;FK&lt;br&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;id&lt;br&gt;number&lt;br&gt;parking_lot_id&lt;br&gt;status_type_id&lt;br&gt;&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" parent="1" vertex="1">
-          <mxGeometry x="230" y="640" width="420" height="90" as="geometry" />
+          <mxGeometry x="-450" y="200" width="200" height="90" as="geometry" />
         </mxCell>
         <mxCell id="mLb-JtUM6yK8Hnpxc0uU-42" value="&lt;div style=&quot;box-sizing:border-box;width:100%;background:#e4e4e4;padding:2px;&quot;&gt;parking_spot&lt;/div&gt;&lt;table style=&quot;width:100%;font-size:1em;&quot; cellpadding=&quot;2&quot; cellspacing=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;PK&lt;br&gt;&lt;br&gt;FK&lt;br&gt;FK&lt;br&gt;FK&lt;br&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;id&lt;br&gt;number&lt;br&gt;floor_id&lt;br&gt;spot_type_id&lt;br&gt;status_type_id&lt;br&gt;&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" parent="1" vertex="1">
-          <mxGeometry x="230" y="780" width="420" height="100" as="geometry" />
+          <mxGeometry x="-780" y="320" width="250" height="120" as="geometry" />
         </mxCell>
         <mxCell id="mLb-JtUM6yK8Hnpxc0uU-43" value="&lt;div style=&quot;box-sizing:border-box;width:100%;background:#e4e4e4;padding:2px;&quot;&gt;vehicle&lt;/div&gt;&lt;table style=&quot;width:100%;font-size:1em;&quot; cellpadding=&quot;2&quot; cellspacing=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;PK&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;id&lt;br&gt;number&lt;br&gt;owner_name&lt;br&gt;vehicle_type_id&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" parent="1" vertex="1">
-          <mxGeometry x="230" y="1100" width="420" height="120" as="geometry" />
+          <mxGeometry x="-210" y="320" width="210" height="120" as="geometry" />
         </mxCell>
         <mxCell id="mLb-JtUM6yK8Hnpxc0uU-44" value="&lt;div style=&quot;box-sizing:border-box;width:100%;background:#e4e4e4;padding:2px;&quot;&gt;operator&lt;/div&gt;&lt;table style=&quot;width:100%;font-size:1em;&quot; cellpadding=&quot;2&quot; cellspacing=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;PK&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;id&lt;br&gt;name&lt;br&gt;phone_number&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" parent="1" vertex="1">
-          <mxGeometry x="230" y="1270" width="420" height="90" as="geometry" />
+          <mxGeometry x="-210" y="200" width="210" height="90" as="geometry" />
         </mxCell>
         <mxCell id="mLb-JtUM6yK8Hnpxc0uU-45" value="&lt;div style=&quot;box-sizing:border-box;width:100%;background:#e4e4e4;padding:2px;&quot;&gt;ticket&lt;/div&gt;&lt;table style=&quot;width:100%;font-size:1em;&quot; cellpadding=&quot;2&quot; cellspacing=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;PK&lt;br&gt;&lt;br&gt;&lt;br&gt;FK&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;id&lt;br&gt;number&lt;br&gt;entry_time&lt;br&gt;parking_slot_id&lt;br&gt;ticket_status&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" parent="1" vertex="1">
-          <mxGeometry x="230" y="1430" width="420" height="90" as="geometry" />
+          <mxGeometry x="-780" y="480" width="250" height="90" as="geometry" />
         </mxCell>
         <mxCell id="mLb-JtUM6yK8Hnpxc0uU-46" value="&lt;div style=&quot;box-sizing:border-box;width:100%;background:#e4e4e4;padding:2px;&quot;&gt;bill&lt;/div&gt;&lt;table style=&quot;width:100%;font-size:1em;&quot; cellpadding=&quot;2&quot; cellspacing=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;PK&lt;br&gt;&lt;br&gt;FK&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;id&lt;br&gt;entry_time&lt;br&gt;exit_time&lt;br&gt;ticket_id&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" parent="1" vertex="1">
-          <mxGeometry x="230" y="1580" width="420" height="90" as="geometry" />
+          <mxGeometry x="-460" y="480" width="230" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="mLb-JtUM6yK8Hnpxc0uU-47" value="&lt;div style=&quot;box-sizing:border-box;width:100%;background:#e4e4e4;padding:2px;&quot;&gt;payment&lt;/div&gt;&lt;table style=&quot;width:100%;font-size:1em;&quot; cellpadding=&quot;2&quot; cellspacing=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;PK&lt;br&gt;&lt;br&gt;FK&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;id&lt;br&gt;timestamp&lt;br&gt;bill_id&lt;br&gt;payment_mode_id&lt;br&gt;payment_status_id&lt;br&gt;payment_reference_id&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" parent="1" vertex="1">
-          <mxGeometry x="230" y="1730" width="420" height="130" as="geometry" />
+        <mxCell id="mLb-JtUM6yK8Hnpxc0uU-47" value="&lt;div style=&quot;box-sizing:border-box;width:100%;background:#e4e4e4;padding:2px;&quot;&gt;payment&lt;/div&gt;&lt;table style=&quot;width:100%;font-size:1em;&quot; cellpadding=&quot;2&quot; cellspacing=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;PK&lt;br&gt;&lt;br&gt;FK&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;id&lt;br&gt;timestamp&lt;br&gt;bill_id&lt;br&gt;payment_mode_id&lt;br&gt;payment_status_id&lt;br&gt;payment_reference_id&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="-210" y="470" width="210" height="120" as="geometry" />
         </mxCell>
         <mxCell id="mLb-JtUM6yK8Hnpxc0uU-49" value="&lt;div style=&quot;box-sizing:border-box;width:100%;background:#e4e4e4;padding:2px;&quot;&gt;spot_assignment_strategy&lt;/div&gt;&lt;table style=&quot;width:100%;font-size:1em;&quot; cellpadding=&quot;2&quot; cellspacing=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;PK&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;id&lt;br&gt;name&lt;br&gt;&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" parent="1" vertex="1">
-          <mxGeometry x="230" y="240" width="210" height="70" as="geometry" />
+          <mxGeometry x="-450" y="90" width="200" height="70" as="geometry" />
         </mxCell>
         <mxCell id="mLb-JtUM6yK8Hnpxc0uU-50" value="&lt;div style=&quot;box-sizing:border-box;width:100%;background:#e4e4e4;padding:2px;&quot;&gt;fee_calc_strategy&lt;/div&gt;&lt;table style=&quot;width:100%;font-size:1em;&quot; cellpadding=&quot;2&quot; cellspacing=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;PK&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;id&lt;br&gt;name&lt;br&gt;&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" parent="1" vertex="1">
-          <mxGeometry x="230" y="370" width="210" height="70" as="geometry" />
+          <mxGeometry x="-210" y="90" width="220" height="70" as="geometry" />
         </mxCell>
         <mxCell id="mLb-JtUM6yK8Hnpxc0uU-51" value="&lt;div style=&quot;box-sizing:border-box;width:100%;background:#e4e4e4;padding:2px;&quot;&gt;parkting_spot_type&lt;/div&gt;&lt;table style=&quot;width:100%;font-size:1em;&quot; cellpadding=&quot;2&quot; cellspacing=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;PK&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;id&lt;br&gt;name&lt;br&gt;&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" parent="1" vertex="1">
-          <mxGeometry x="230" y="950" width="210" height="70" as="geometry" />
-        </mxCell>
-        <mxCell id="mLb-JtUM6yK8Hnpxc0uU-52" value="Schema" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" parent="1" vertex="1">
-          <mxGeometry x="130" y="40" width="100" height="40" as="geometry" />
+          <mxGeometry x="-450" y="320" width="200" height="70" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
