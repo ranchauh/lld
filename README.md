@@ -2,6 +2,15 @@
 Code repository for LLD practice
 
 
+## Projects/Concepts in this repository
+
+* [OOPS Basics](./src/main/java/basics)
+* [Design Patterns](./src/main/java/design/patterns)
+* [LLD - Tic Tac Toe](./src/main/java/tictactoe)
+* [LLD - Parking Lot](./src/main/java/parkinglot)
+* [LLD - Book My Show](./src/main/java/bookmyshow)
+
+
 ## Reference YouTube channels:
 
 ### System Design & LLD:
