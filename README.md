@@ -11,6 +11,10 @@ Code repository for LLD practice
 * [LLD - Book My Show](./src/main/java/bookmyshow)
 
 
+## List of Case Studies
+
+* [grokking-the-object-oriented-design-interview](https://github.com/tssovi/grokking-the-object-oriented-design-interview/tree/master/object-oriented-design-case-studies)
+
 ## Reference YouTube channels:
 
 ### System Design & LLD:
