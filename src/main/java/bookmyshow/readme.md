@@ -1,5 +1,7 @@
 # Book My Show - Low Level Design
 
+![./resources/bms-img.png](./resources/bms-img.png)
+
 ## Functional Requirements
 
 * Support multiple cities.
