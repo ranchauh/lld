@@ -8,7 +8,7 @@ Code repository for LLD practice
 * [Design Patterns](./src/main/java/design/patterns)
 * [LLD - Tic Tac Toe](./src/main/java/tictactoe)
 * [LLD - Parking Lot](./src/main/java/parkinglot)
-* [LLD - Book My Show](./src/main/java/bookmyshow)
+* [LLD - Book My Show](https://github.com/ranchauh/book-my-show)
 
 
 ## List of Case Studies
