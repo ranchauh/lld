@@ -69,6 +69,7 @@ Code repository for LLD practice
 8. Twitter - https://lnkd.in/gVVcSYNf
 9. Jane Street - https://lnkd.in/gRudhsrn
 10. Longer list https://lnkd.in/g3xqDpg6
+11. Socket Programming in Python: https://realpython.com/python-sockets/ 
 
 ## Youtube Channels:
 1. Martin Kleppman's channel - https://lnkd.in/gUJGHWEw
